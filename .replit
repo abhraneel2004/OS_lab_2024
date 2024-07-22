@@ -1,0 +1,9 @@
+entrypoint = "main.sh"
+modules = ["bash"]
+
+[nix]
+channel = "stable-23_11"
+
+[deployment]
+run = ["bash", "main.sh"]
+deploymentTarget = "cloudrun"
