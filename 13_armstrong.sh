@@ -1,7 +1,7 @@
 countdig(){
   n=$1
   c=0
-  while [ $n -gt 0 ]
+  while [ "$n" -gt 0 ]
   do
     ((c++))
     n=$((n / 10))
@@ -21,14 +21,14 @@ pow() {
 }
 
 num=$1
-echo "Number of digits in $num is $(countdig $num)"
+echo "Number of digits in $num is $(countdig "$num")"
 
-dig=$(countdig $num)
+dig=$(countdig "$num")
 temp=$num
 sum=0
-while [ $temp -gt 0 ]; do
+while [ "$temp" -gt 0 ]; do
   rem=$((temp % 10))
-  k=$(pow rem dig)
+  k=$(pow $rem "$dig")
   sum=$((sum + k))
   temp=$((temp / 10))
 done
