@@ -1,0 +1,4 @@
+gcd1.sh
+gcd2.sh
+temp.txt
+test.txt
