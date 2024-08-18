@@ -1,0 +1,5 @@
+Name|Roll|Marks
+abd|1|90
+def|2|85
+abhijit|3|100
+jkl|4|70

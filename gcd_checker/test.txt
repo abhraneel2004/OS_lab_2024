@@ -4,3 +4,6 @@
 3 0 Not_Possible
 abc 5 Not_Possible
 abc xyz Not_Possible
+abc pqr Not_Possible
+3 6 3
+0 4 0
