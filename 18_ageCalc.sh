@@ -24,12 +24,9 @@ echo "Day: $d2"
 
 yr=`expr $y2 - $yyyy`
 mo=`expr $m2 - $mm`
-if [[ $mo -lt 0 ]]; thenif [[ $if [[ $(leapYear $yyyy) -eq 1 ]] && [[ $mm -eq 2 ]] && [[ $dd -le 29 ]]; then
-    echo "Valid Date"(leapYear $yyyy) -eq 1 ]] && [[ $mm -eq 2 ]] && [[ $dd -le 29 ]]; then
-    echo "Valid Date"
+if [[ $mo -lt 0 ]]; then
   yr=$((yr - 1))
-  mo=$((mo + 12))if [[ $(leapYear $yyyy) -eq 1 ]] && [[ $mm -eq 2 ]] && [[ $dd -le 29 ]]; then
-    echo "Valid Date"
+  mo=$((mo + 12))
 fi
 da=`expr $d2 - $dd`
 if [[ $da -lt 0 ]]; then
