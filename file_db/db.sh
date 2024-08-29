@@ -52,9 +52,7 @@ delete(){
   grep -v "|$roll|" $FILE > temp.txt && mv temp.txt $FILE
 }
 
-display(){
-  cat $FILE
-  echo " "
+display(){ cat $FILE && echo " "
 }
 
 while [ true ]; do
