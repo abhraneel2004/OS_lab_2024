@@ -10,27 +10,27 @@
 // - The parent should also print its PID and newly created child process ID.
 
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <sys/types.h>
+#include <stdio.h>      // Standard input/output library for printf and perror
+#include <stdlib.h>     // Standard library for memory allocation, process control, etc.
+#include <unistd.h>     // Provides access to the POSIX operating system API, including fork and getpid
+#include <sys/types.h>  // Defines data types used in system calls, such as pid_t
 
 int main() {
-    // Create a child process
-    pid_t child_pid = fork();
+    // Create a child process using fork()
+    pid_t child_pid = fork(); // fork() creates a new process by duplicating the calling process
 
     if (child_pid < 0) {
-        // Fork failed
-        perror("Fork failed");
-        exit(EXIT_FAILURE);
+        // Check if fork failed
+        perror("Fork failed"); // Print an error message to standard error
+        exit(EXIT_FAILURE); // Exit the program with a failure status
     } else if (child_pid == 0) {
         // This block is executed by the child process
-        printf("Child Process: My Process ID is %d\n", getpid());
+        printf("Child Process: My Process ID is %d\n", getpid()); // Print the child's process ID
     } else {
         // This block is executed by the parent process
-        printf("Parent Process: My Process ID is %d\n", getpid());
-        printf("Parent Process: Created Child Process with ID %d\n", child_pid);
+        printf("Parent Process: My Process ID is %d\n", getpid()); // Print the parent's process ID
+        printf("Parent Process: Created Child Process with ID %d\n", child_pid); // Print the child's process ID
     }
 
-    return 0;
+    return 0; // Return 0 to indicate successful completion of the program
 }
