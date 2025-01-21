@@ -1,0 +1,1 @@
+ls -pS | grep -v / | head -n 1

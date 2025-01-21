@@ -2,7 +2,7 @@
 #include <unistd.h>     // Provides access to the POSIX operating system API
 #include <sys/types.h>  // Defines data types used in system calls
 #include <stdlib.h>     // Provides functions for memory allocation, process control, etc.
-#include <string.h>     // Provides string handling functions
+// #include <string.h>     // Provides string handling functions
 #include <sys/wait.h>   // Provides macros related to process termination
 
 int main(void) {
